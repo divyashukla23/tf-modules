@@ -18,3 +18,21 @@ output "ec2_instance_id" {
 output "ec2_public_ip" {
   value = module.my_ec2.public_ip
 }
+
+
+module "my_s3" {
+  source              = "./modules/s3"
+  bucket_name         = "my-terraform-s3-bucket"
+  environment         = "production"
+}
+
+output "s3_bucket_id" {
+  value = module.my_s3.bucket_id
+}
+`
+output "s3_bucket_arn" {
+  value = module.my_s3.bucket_arn
+}
+
+
+
