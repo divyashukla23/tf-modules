@@ -29,7 +29,6 @@ module "my_s3" {
 output "s3_bucket_id" {
   value = module.my_s3.bucket_id
 }
-`
 output "s3_bucket_arn" {
   value = module.my_s3.bucket_arn
 }
